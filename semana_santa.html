@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+<title>JavaScript</title>
+<h1 id="t1">Hola! En esta web estaremos viendo algunos ejemplos de eventos en html que vinculan JavaScript</h1>
+</head>
+<body>
+    <div class="contenedor1">
+        <div class="columna1">
+        <h1>Caso #1</h1>
+            <p>En este espacio veremos el ejemplo del primer caso, el cual es cuando tenemos un boton
+              y el usuario en la pagina web le da click en este, al suceder este evento, con JavaScript haremos que se muestre la fecha y hora
+            actual.</p>
+            <button onclick="document.getElementById('fecha').innerHTML=Date()">Que fecha y hora es?</button>
+
+        <p id="fecha"></p>
+        </div>
+    <div class="columna1">
+        <h1>Caso #2</h1>
+            <p>En este espacio veremos el ejemplo del segundo caso, el cual es que cuando el usuario da click al boton, este hara que salga un cuadro emergente con cualquier cosa que le queramos colocar.</p>
+            <button onClick="alert('El profe Norbey me va a pasar!')">Sorpresa!</button>
+        </div>
+    <div class="columna1">
+        <h1>Caso #3</h1>
+            <p>En este espacio veremos el ejemplo del tercer caso, el cual es cuando usamos una funcion</p>
+            <button id="btnPrincipal">Funcion</button>
+            <script>
+                let boton = document.getElementById("btnPrincipal")
+                boton.addEventListener("click", respuestaClick)
+                function respuestaClick(){
+                alert("Soy una alerta de un evento de click en un boton, y estoy usando una funcion para mostrarme")
+                console.log("Respuesta evento satisfactoria");
+                }
+            </script>
+        </div>
+    </div>
+    <div class="contenedor2">
+        <div class="columna2">
+            <h1>Caso #4</h1>
+          <p>En este espacio veremos el ejemplo del cuarto caso, en este evento el usuario pasara el mouse sobre el boton y al hacer esto nos mostrara lo que queramos sin necesidad de dar click, en este caso informacion del usuario actual.</p>
+          <button onmouseover="document.getElementById('demo').innerHTML = ingeniero.nombre + ', ' + ingeniero.puesto">The time is?</button>
+          <p id="demo"></p>
+          <script>	
+            const ingeniero = {
+              nombre: "La persona que esta viendo esto es un ingeniero exitoso que ganara mucho dinero y tendra una vida feliz",
+              puesto: "este ingeniero puede que aun no trabaje pero en un futuro sera la competencia directa de Elon Musk",
+            };
+            </script>
+        </div>
+        <div class="columna2">
+          <h1>Caso #5</h1>
+          <p>En este espacio veremos el ejemplo del quinto caso,</p>
+        </div>
+        <div class="columna2">
+          <h1>Caso #6</h1>
+          <p>En este espacio veremos el ejemplo del sexto caso,</p>
+        </div>
+    </div>
+    <div class="contenedor3">
+        <div class="columna3">
+          <h1>Caso #7</h1>
+          <p>En este espacio veremos el ejemplo del septimo caso,</p>
+        </div>
+        <div class="columna3">
+          <h1>Caso #8</h1>
+          <p>En este espacio veremos el ejemplo del octavo caso,</p>
+        </div>
+        <div class="columna3">
+          <h1>Caso #9</h1>
+          <p>En este espacio veremos el ejemplo del noveno caso,</p>
+        </div>
+    </div>
+    <div class="contenedor4">
+        <div class="columna4">
+          <h1>Caso #10</h1>
+          <p>En este espacio veremos el ejemplo del decimo caso,</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
