@@ -53,17 +53,47 @@
         </div>
         <div class="columna2">
           <h1>Caso #5</h1>
-          <p>En este espacio veremos el ejemplo del quinto caso,</p>
+          <p>En este espacio veremos el ejemplo del quinto caso, Este evento se dispara cuando se presiona una tecla en cualquier momento durante la pulsación, es decir, no es necesario soltar la tecla. También es un evento que captura todas las teclas, incluyendo teclas de control como Shift, Esc, Ctrl, etc.</p>
+           <div>
+            <input type="text" id="miInput" placeholder="Escribe algo..." />
+            <h2>Tecla presionada: <span id="teclaPresionada">Ninguna</span></h2>
+            <script>
+              const input = document.getElementById("miInput");
+              const spanTecla = document.getElementById("teclaPresionada");
+      
+              input.addEventListener("keydown", function(event) {
+                
+                  spanTecla.textContent = event.key; 
+              });
+          </script>
+        </div> 
         </div>
         <div class="columna2">
           <h1>Caso #6</h1>
-          <p>En este espacio veremos el ejemplo del sexto caso,</p>
+          <p>En este espacio veremos el ejemplo del sexto caso,  Se activa cuando cambia el valor de un campo como: input, textarea, select, y el usuario termina la edición.</p>
+          <select id="opciones">
+            <option value="uno">Uno</option>
+            <option value="dos">Dos</option>
+          </select>
+          
+          <script>
+            document.getElementById("opciones").addEventListener("change", function() {
+              alert("Seleccionaste: " + this.value);
+            });
+          </script>
         </div>
     </div>
     <div class="contenedor3">
         <div class="columna3">
           <h1>Caso #7</h1>
-          <p>En este espacio veremos el ejemplo del septimo caso,</p>
+          <p>En este espacio veremos el ejemplo del septimo caso, Se activa cuando el usuario hace doble clic rápido sobre un elemento.</p>
+          <p id="dobleClick">Haz doble clic en este texto</p>
+
+<script>
+  document.getElementById("dobleClick").addEventListener("dblclick", function() {
+    this.textContent = "¡Doble clic detectado!";
+  });
+</script>
         </div>
         <div class="columna3">
           <h1>Caso #8</h1>
