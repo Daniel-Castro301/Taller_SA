@@ -88,26 +88,51 @@
           <h1>Caso #7</h1>
           <p>En este espacio veremos el ejemplo del septimo caso, Se activa cuando el usuario hace doble clic rápido sobre un elemento.</p>
           <p id="dobleClick">Haz doble clic en este texto</p>
-
 <script>
   document.getElementById("dobleClick").addEventListener("dblclick", function() {
     this.textContent = "¡Doble clic detectado!";
   });
 </script>
-        </div>
         <div class="columna3">
           <h1>Caso #8</h1>
-          <p>En este espacio veremos el ejemplo del octavo caso,</p>
+          <body onbeforeprint="imprime()">
+            <p>En este espacio veremos el ejemplo del octavo caso, se realiza una combinacion de teclas la cual imprimira este documento</p>
+            <p><b>pasos</b>: realiza la siguiente combinacion de teclas Ctrl + P</p>
+            <Script>
+              function imprime(){
+                alert ("vas a realizar la impresion de este documento ahora mismo");
+              }
+            </Script>
+            </body>
+
         </div>
         <div class="columna3">
           <h1>Caso #9</h1>
-          <p>En este espacio veremos el ejemplo del noveno caso,</p>
+          <body onbeforeunload="youtube()">
+          <p>En este espacio veremos el ejemplo del noveno caso, el cual es que cuando demos clic en el enlace nos redirija a youtube</p>
+          <a href="https://www.youtube.com/watch?v=GPKQk_Vg1Qc"> Presiona el link para dirigirte a youtube.com</a>
+          <script>
+            function youtube(){
+              return "mela la music";
+            }
+          </script>
+          </body>
+
         </div>
     </div>
     <div class="contenedor4">
         <div class="columna4">
           <h1>Caso #10</h1>
-          <p>En este espacio veremos el ejemplo del decimo caso,</p>
+          <body>
+          <p>En este espacio veremos el ejemplo del decimo caso, el cual es realizar el copeo de un texto el cual no indicara que se copeo con exito</p>
+            <input type="text" oncopy="copear()" value="copiar este texto">
+            <p id="demo"></p>
+            <script>
+              function copear(){
+                document.getElementById("demo").innerHTML = "Lo haz copeado con exito!"
+              } 
+            </script>
+            </body>
         </div>
     </div>
 </body>
